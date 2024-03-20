@@ -1,0 +1,18 @@
+@page "/weather"
+@rendermode InteractiveServer
+
+<PageTitle>Loading Weather</PageTitle>
+
+<h1>Loading Weather Info</h1>
+
+@code {
+    const string _FilePath = "./Data/open-meteo-52.13N106.74W486m-BIG.csv";
+
+    List<string>? Lines {get; set; }
+
+    protected override void OnInitialized()
+    {
+        Lines = new();
+        base.OnInitialized();
+    }
+}
